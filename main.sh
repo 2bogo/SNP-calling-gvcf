@@ -1,4 +1,4 @@
-while getopts h:s:f:t: flag
+while getopts s:f:d:t:o: flag
 do
     case "${flag}" in
         s) sample=${OPTARG};;
