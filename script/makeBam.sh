@@ -6,7 +6,7 @@ THREAD=$3
 bwa mem -t $THREAD $REF ./fastq/${SAMPLENAME}_1.fastq ./fastq/${SAMPLENAME}_2.fastq -o ./tmp/${SAMPLENAME}.sam &&
 
 # mapping 과정에서 생긴 잘못된 FLAG 값 수정
-samtools fixmate -O bam ./tmp/${SAMPLENAME}.sam ./tmp${SAMPLENAME}.bam &&
+samtools fixmate -O bam ./tmp/${SAMPLENAME}.sam ./tmp/${SAMPLENAME}.bam &&
 rm ./tmp/${SAMPLENAME}.sam &&
 
 # coordinate(좌표) 기준으로 sorting 해주는 과정
